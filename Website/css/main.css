@@ -1,0 +1,208 @@
+/* Website main template */ 
+@font-face {
+    font-family: nexa;
+    src: url(Nexa.ttf);
+}
+
+ body {
+     background-image: url(../images/bg2.png);
+     background-size:cover;
+     background-color: #35393C;
+     font-family: nexa, times new roman;
+     margin: 0 auto;
+     max-width: 1550px;
+     min-height: 100%;
+     overflow-y: auto;
+     position: relative;
+     width:1519px;
+ }
+ 
+ #menu-container {
+     display: block;
+ }
+ 
+ nav {
+     text-align: center;
+     float: left;
+     border-bottom: 5px white solid;
+     padding: 0px;
+     box-sizing: border-box;
+     position: relative;
+     max-width: 1600px;
+     margin: 0 auto;
+     width: 1519px;
+ }
+ 
+ nav a {
+     display:block;
+     float: left;
+     text-decoration: none;
+     color: white;
+     vertical-align: baseline;
+     padding: 3%;
+     margin-right: 2%;
+     font-size: 30px;  
+ }
+ 
+ nav a:hover {
+     background-image: url("../images/events_hover.png");
+     background-repeat:no-repeat;
+     color: #35393C;
+     -webkit-backface-visibility: hidden;
+ }
+
+ .floatstopper {
+    clear:both;
+}
+
+ #logo {
+     margin-top: 10px;
+     width: 25%;
+     height: 25%;
+     float: left;
+ }
+
+#footer {
+     background-color: #4B5054;     
+     padding-top: 0px;
+     box-sizing: border-box;
+     position: relative;
+     max-width: 1550px;
+     width: 1519px;
+     clear:both;
+ }
+
+#footer table{
+    margin-left:auto;
+}
+
+#facebook {
+    background-image: url("../images/logos/facebook_logo.png");
+    background-repeat:no-repeat;
+    background-size:50px 50px;
+    width: 50px;
+    height: 50px;
+}
+#facebook a{
+    display:block;
+    padding:25px;
+}
+#twitter a{
+    display:block;
+    padding:25px;
+}
+#facebook:hover{
+    background-image: url("../images/logos/facebook_logo_invert.png");
+    background-size:50px 50px;
+    background-repeat:no-repeat;
+    -webkit-backface-visibility: hidden;
+}
+ 
+#twitter {
+    background-image: url("../images/logos/twitter_logo.png");
+    background-repeat:no-repeat;
+    background-size:50px 50px;
+    width: 50px;
+    height: 50px;
+}
+
+#twitter:hover{
+    background-image: url("../images/logos/twitter_logo_invert.png");
+    background-size:50px 50px;
+    background-repeat:no-repeat;
+}
+
+#space {
+    width: 10px;
+    height: 50px;
+}
+
+#back
+{
+    z-index: -1;
+    position:absolute;
+    top:0;
+    width:1519px;  
+    height:100%;
+    background-color: #35393C;
+    opacity:0.7;
+
+}
+
+/*Main body Home*/
+
+ #leftHalf {
+     color:white;
+     width:740px;
+     float:left;
+     margin-top:15px;
+     margin-left:23px;
+}
+
+ #leftHalfImg {
+     width:740px;
+     height:500px;
+     margin-top:10px;
+
+ }
+
+ #headLeft {
+     color:white;
+     text-align:center;
+     margin-top:20px;
+     font-size:24px;
+     width:740px;
+}
+
+#leftDesc {
+    text-indent:40px;
+    text-align:justify;
+    font-size:18px;
+    width:740px;
+}
+
+ #rightHalf {
+    width:740px;
+    float:right;
+    margin-top:15px;
+}
+
+#headRight{
+    color:white;
+    text-align:center;
+    margin-top:20px;
+    font-size:24px;
+    width:740px;
+}
+
+.tablePic{
+    width:330px;
+    height:200px;
+    margin-top:-3px;
+    padding:13px;
+}
+
+#rightTable {
+    border-collapse: collapse;
+    width:660px;
+}
+
+#rightTable a{
+    text-decoration:none;
+    color:white;
+    display:block;
+    padding-bottom:15px;
+
+}
+
+#rightTable td{
+    text-align:center;
+}
+
+#rightTable a:hover{
+     background-image: url("../images/events_hover.png");
+     background-repeat:no-repeat;
+     color: #35393C;
+     -webkit-backface-visibility: hidden;
+}
+
