@@ -140,7 +140,6 @@ body {
     padding-top: 4%;
 }
 
-
 #back
 {
     z-index: -1;
@@ -152,61 +151,55 @@ body {
     opacity: 0.7;
 }
 
-
 #halfImg{
     width:100%;
 }
+
 #head{
-    
     text-align: center;
-    font-size:40px;
-    color:white;
+    font-size: 40px;
+    color: white;
     border-bottom: 3px solid white;
- 
-    
-    margin-bottom:3%;
-    border-bottom-left-radius:10px;
-    border-bottom-right-radius:10px;
-    padding:0.5%;
-    
+    margin-bottom: 3%;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 0.5%;
 }
 
 #subtitle{
     text-align: center;
-    font-size:24px;
-    color:white;
+    font-size: 24px;
+    color: white;
     border-bottom: 3px solid white;
-    border-bottom-left-radius:10px;
-    border-bottom-right-radius:10px;
-/*    margin-left: 37%;*/
-   
-    padding:0.5%;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 0.5%;
 }
 
 #heldBy {
     text-align: center;
-    font-size:24px;
-    color:white;
+    font-size: 24px;
+    color: white;
     margin-top: 1%;
-    padding:0.5%;
+    padding: 0.5%;
 }
 
 #price {
     text-align: center;
-    font-size:24px;
-    color:white;
+    font-size: 24px;
+    color: white;
     margin-top: 0.5%;
-    padding:0.5%;
+    padding: 0.5%;
 }
 
 .desc{
     text-align: justify;
     text-indent: 45px;
-    font-size:24px;
-    color:white;
-    margin-left:10%;
-    margin-right:10%;
-    margin-top:5%;
+    font-size: 24px;
+    color: white;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 5%;
 }
 
 #logo{

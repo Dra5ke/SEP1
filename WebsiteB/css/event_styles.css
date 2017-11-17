@@ -3,7 +3,6 @@
     src: url(Nexa.ttf);
 }
 
-
 body {
      background-image: url(../images/bg2.png);
      background-size: cover;
@@ -81,7 +80,6 @@ body {
     box-sizing: border-box;
     position: relative;
     max-width: 1550px;
-    /*     width: 1519px;*/
     clear: both;
 }
 
@@ -161,11 +159,9 @@ body {
     padding: 5%;
 }
 
-/*issues with a high and width*/
-
 #eventGrid a {
-    text-decoration:none;
-    color:white;
+    text-decoration: none;
+    color: white;
     text-align: center;
     padding-bottom: 5%;
     font-size: 150%;
@@ -173,8 +169,8 @@ body {
 
 #eventF:hover {
     background-image: url("../images/events_hover.png");
-    background-repeat:no-repeat;
-    background-size:cover;
+    background-repeat: no-repeat;
+    background-size: cover;
     color: #35393C;
 }
 
@@ -189,14 +185,13 @@ body {
 }
 
 @media screen and (max-width: 992px) {
-    
   #eventF{
     background-color: none;
 }
     
     #eventGrid a {
-    text-decoration:none;
-    color:white;
+    text-decoration: none;
+    color: white;
     text-align: center;
     padding-bottom: 5%;
     font-size: 150%;
@@ -219,9 +214,9 @@ body {
 
 .eventsTitle p {
     text-align: center;
-    font-size:40px;
-    color:white;
+    font-size: 40px;
+    color: white;
     margin-bottom: 1%;
     margin-top: 1%;
-    padding:0.5%;
+    padding: 0.5%;
 }
