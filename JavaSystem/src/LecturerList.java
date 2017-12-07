@@ -1,6 +1,8 @@
 import java.util.ArrayList;
+
 public class LecturerList
 {
+   
 private ArrayList<Lecturer> lecturers;
 
 public LecturerList()
@@ -48,7 +50,7 @@ public Lecturer[] getLecturerBySubject(String subject)
    return lecturerlist;
 }
 
-public ArrayList getAllLecturers()
+public ArrayList<Lecturer> getAllLecturers()
 {
    return lecturers;
 }

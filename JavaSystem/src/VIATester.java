@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 
 public class VIATester
 {
@@ -133,14 +134,149 @@ public class VIATester
       
       System.out.println(lecturers.toString());
       
-      Lecturer[] specificLecturers = new Lecturer[lecturers.getNumberOfLecturers()];
+      Lecturer[] specificLecturers;
       
       specificLecturers = lecturers.getLecturer("Hara");
-      for (int i = 0; i<lecturers.getNumberOfLecturers(); i++)
+      for (int i = 0; i<specificLecturers.length-1; i++)
       {
          System.out.println(specificLecturers[i].toString());
          System.out.println();
       }
+      
+      for(int i = 0 ; i < lecturers.getAllLecturers().size(); i++)
+      {
+         System.out.println(lecturers.getAllLecturers().get(i).getId());
+         System.out.println();
+      }
+      
+      System.out.println("/////////////////////////");
+      System.out.println();
+      
+      for(int i = 0; i < events.getAllEvents().size(); i++)
+      {
+         System.out.println(events.getAllEvents().get(i).getId());
+         System.out.println();
+      }
+      
+      Lecturer lecturer6 = new Lecturer();
+      lecturer6.setEmail("hara@haramail.hara");
+      lecturer6.setPhone("0722DejaImiSunaCunoscut");
+      lecturer6.setName("Hara");
+      lecturer6.setSponsor(false);
+      lecturer6.setSubject("Doin a Hara");
+      
+      lecturers.addLecturer(lecturer6);
+      
+      LecturerList lecturers2 = new LecturerList();
+      lecturers2.addLecturer(lecturer4);
+      lecturers2.addLecturer(lecturer3);
+      
+      
+      Seminar seminar = new Seminar();
+      seminar.setTitle("Pula lu Hara");
+      seminar.setStartDate(date);
+      seminar.setstartTime(time);
+      seminar.setTotalTickets(100);
+      seminar.setAvailableTickets(30);
+      seminar.setDiscount(30);
+      seminar.setPrice(1000);
+      seminar.setFinalized(false);
+      
+      String[] subjects = new String[3];
+      subjects[0] = "astrology";
+      subjects[1] = "hara";
+      subjects[2] = "meditation";
+      
+      seminar.setLecturers(lecturers2);
+      seminar.setSubjects(subjects);
+      seminar.setSponsorName("Anca");
+      seminar.setDuration(duration);
+      
+      events.addEvent(seminar);
+      
+      System.out.println();
+      System.out.println(seminar.toString());
+      
+      for(int i = 0 ; i < lecturers.getAllLecturers().size(); i++)
+      {
+         System.out.println(lecturers.getAllLecturers().get(i).getId());
+         System.out.println();
+      }
+      
+      System.out.println("/////////////////////////");
+      System.out.println();
+      
+      for(int i = 0; i < events.getAllEvents().size(); i++)
+      {
+         System.out.println(events.getAllEvents().get(i).getId());
+         System.out.println();
+      }
+      
+      ArrayList<Integer> eventsArray = new ArrayList<Integer>();
+      eventsArray.add(1);
+      eventsArray.add(3);
+      ArrayList<Integer> eventsArray2 = new ArrayList<Integer>();
+      eventsArray2.add(0);
+      eventsArray2.add(1);
+      ArrayList<Integer> eventsArray3 = new ArrayList<Integer>();
+      eventsArray3.add(4);
+      eventsArray3.add(2);
+      Date dateOfRegistration = new Date(4, 6, 2017);
+      
+      Member member = new Member();
+      member.setAddress("haragade");
+      member.setAttendedEvents(eventsArray);
+      member.setDateOfRegistration(dateOfRegistration);
+      member.setEmail("hara.hara@haramail.hara");
+      member.setName("The Hara");
+      member.setNewsletterSubscription(true);
+      member.setPaymentYear(2019);
+      member.setPhone("50212345");
+      
+      Member member2 = new Member();
+      member2.setAddress("haragade2");
+      member2.setAttendedEvents(eventsArray2);
+      member2.setDateOfRegistration(dateOfRegistration);
+      member2.setEmail("hara.hara@haramail.hara");
+      member2.setName("The Hara2");
+      member2.setNewsletterSubscription(true);
+      member2.setPaymentYear(2019);
+      member2.setPhone("50212345");
+      
+      Member member3 = new Member();
+      member3.setAddress("haragade3");
+      member3.setAttendedEvents(eventsArray3);
+      member3.setDateOfRegistration(dateOfRegistration);
+      member3.setEmail("hara.hara@haramail.hara");
+      member3.setName("The Hara3");
+      member3.setNewsletterSubscription(true);
+      member3.setPaymentYear(2019);
+      member3.setPhone("50212345");
+      
+      MemberList members = new MemberList();
+      members.addMember(member);
+      members.addMember(member2);
+      members.addMember(member3);
+      
+      System.out.println();
+      System.out.println(members.toString());
+      
+      EventList attendedEvents = new EventList();
+      
+      attendedEvents = member.getAttendedEvents(events);
+      
+      System.out.println();
+      System.out.println(attendedEvents.toString());
+      
+      attendedEvents = member2.getAttendedEvents(events);
+      
+      System.out.println();
+      System.out.println(attendedEvents.toString());
+      
+      attendedEvents = member3.getAttendedEvents(events);
+      
+      System.out.println();
+      System.out.println(attendedEvents.toString());
    }
 
 }

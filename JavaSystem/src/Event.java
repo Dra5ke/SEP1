@@ -1,7 +1,7 @@
 
 public class Event
 {
-   private int ID;
+   private int id;
    private String title;
    private Date startDate;
    private Time startTime;
@@ -13,9 +13,14 @@ public class Event
 
    public Event()
    {
-
+      id = UID.generateEventId();
    }
 
+   public int getId()
+   {
+      return id;
+   }
+   
    public void setTitle(String title)
    {
       this.title = title;

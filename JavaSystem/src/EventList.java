@@ -14,6 +14,30 @@ public class EventList
       events.add(event);
    }
 
+   public ArrayList<Event> getAllEvents()
+   {
+      return events;
+   }
+   
+   public Event getEventByTitle(String title)
+   {
+      Event event;
+      event = new Event();
+      int i;
+      int ok = 0;
+      
+      for (i = 0; i < events.size() && ok==0; i++)
+      {
+         if (events.get(i).getTitle() == title) 
+         {
+            event = events.get(i);
+            ok = 1;
+         }
+      }
+
+      return event;
+   }
+   
    public Event[] getEvent(boolean finalized)
    {
       Event finalizedEvents[];
@@ -31,7 +55,7 @@ public class EventList
       return finalizedEvents;
    }
 
-   public Event[] getEvent(Date startDate, Date endDate)
+   public Event[] getEvent(Date startDate)
    {
       Event eventsArray[];
       eventsArray = new Event[events.size()];

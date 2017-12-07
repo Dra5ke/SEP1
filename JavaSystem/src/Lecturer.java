@@ -1,7 +1,7 @@
 
 public class Lecturer
 {
-   private int UID;
+   private int id;
    private String name;
    private String email;
    private String phone;
@@ -10,17 +10,12 @@ public class Lecturer
 
    public Lecturer()
    {
-
+      id = UID.generateLecturerId();
    }
 
-   public void setUID(int uID)
+   public int getId()
    {
-      UID = uID;
-   }
-
-   public int getUID()
-   {
-      return this.UID;
+      return id;
    }
 
    public void setName(String name)

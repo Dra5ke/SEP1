@@ -65,6 +65,26 @@ public class Workshop extends Event
    {
       this.duration = duration;
    }
-   
+   public String subjectsToString()
+   {
+      String list = "";
+      for (int i = 0; i < subjects.length; i++)
+      {
+         list = list + subjects[i] + ", ";
+      }
+
+      return list;
+   }
+   public String toString()
+   {
+      String list = super.toString();
+
+      list = list + "\n" + "This event is a Seminar on "
+            + this.subjectsToString() + "held by the following lecturers: "
+            + "\n" + "\n" + this.lecturers.toString() + "\n"
+            + "The event is sponsored by " + sponsorName + "\n"
+            + "The event will take " + duration + " days.";
+      return list;
+   }
    
 }
