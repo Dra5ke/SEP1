@@ -1,26 +1,40 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
 
 public class Event
 {
-   private int id;
+   protected int id;
    private String title;
-   private Date startDate;
+   protected Date startDate;
    private Time startTime;
    private int totalTickets;
-   private int availableTickets;
    private int discount;
    private int price;
    private boolean finalized;
+   protected File file;
 
    public Event()
    {
+      new File("events").mkdir();
       id = UID.generateEventId();
+   }
+
+   public File getFile()
+   {
+      return file;
    }
 
    public int getId()
    {
       return id;
    }
-   
+
+   public void setId(int id)
+   {
+      this.id = id;
+   }
+
    public void setTitle(String title)
    {
       this.title = title;
@@ -41,7 +55,7 @@ public class Event
       return startDate.copy();
    }
 
-   public void setstartTime(Time startTime)
+   protected void setStartTime(Time startTime)
    {
       this.startTime = startTime.copy();
    }
@@ -59,16 +73,6 @@ public class Event
    public int getTotalTickets()
    {
       return totalTickets;
-   }
-
-   public void setAvailableTickets(int availableTickets)
-   {
-      this.availableTickets = availableTickets;
-   }
-
-   public int getAvailableTickets()
-   {
-      return availableTickets;
    }
 
    public void setDiscount(int discount)
@@ -104,23 +108,25 @@ public class Event
          return false;
    }
 
+   public String userToString()
+   {
+      String message = new String();
+      if(finalized == true)
+      message = "Event title: " + title + "\n" + "Start date: "
+            + startDate.toString() + "\n" + "Start time: "
+            + startTime.toString() + "\n" + "Total number of tickets: "
+            + totalTickets + "\n" + "Price:" + price + "\n"
+            + "Discount offered: " + discount + "%";
+      
+      return message;
+   }
+
    public String toString()
    {
-      if (this.isFinalized())
-         return title + ": " + "Will be held on " + startDate.toString()
-               + " at " + startTime.toString() + "\n" + "There are "
-               + totalTickets + " tickets in total of which " + availableTickets
-               + " are available for purchase." + "\n"
-               + "The discount that is available for this event is " + discount
-               + "% of the total price of " + price + "DKK." + "\n"
-               + "The event is finalized.";
-      else
-         return title + ": " + "Will be held on " + startDate.toString()
-               + " at " + startTime.toString() + "\n" + "There are "
-               + totalTickets + " tickets in total of which " + availableTickets
-               + " are available for purchase." + "\n"
-               + "The discount that is available for this event is " + discount
-               + "% of the total price of " + price + "DKK." + "\n"
-               + "The event is not finalized.";
+      return id + System.lineSeparator() + title + System.lineSeparator()
+            + startDate.toString() + System.lineSeparator()
+            + startTime.toString() + System.lineSeparator() + totalTickets
+            + System.lineSeparator() + discount + System.lineSeparator() + price
+            + System.lineSeparator() + finalized;
    }
 }

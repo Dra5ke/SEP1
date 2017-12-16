@@ -59,6 +59,6 @@ public class Time
       else
          m = m + minute;
 
-      return h + ":" + m;
+      return h + " " + m;
    }
 }

@@ -69,16 +69,16 @@ public class Date
    
    public boolean isLarger(Date date)
    {
-      if(date.getYear() > this.year) return true;
+      if(date.getYear() > this.year) return false;
       
       if(date.getYear() == this.year) 
       {
-         if(date.getMonth() > this.month) return true;
+         if(date.getMonth() > this.month) return false;
          
          if(date.getMonth() == this.month)
-            if(date.getDay() >= this.day) return true;
+            if(date.getDay() >= this.day) return false;
       }
-      return false;
+      return true;
    }
 
    public String toString()
@@ -95,6 +95,6 @@ public class Date
       else
          m = "" + month;
 
-      return d + "/" + m + "/" + year;
+      return d + " " + m + " " + year;
    }   
 }

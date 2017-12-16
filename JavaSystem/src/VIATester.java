@@ -2,7 +2,6 @@ import java.util.ArrayList;
 
 public class VIATester
 {
-
    public static void main(String[] args)
    {
       
@@ -134,14 +133,14 @@ public class VIATester
       
       System.out.println(lecturers.toString());
       
-      Lecturer[] specificLecturers;
+      /*Lecturer[] specificLecturers;
       
       specificLecturers = lecturers.getLecturer("Hara");
       for (int i = 0; i<specificLecturers.length-1; i++)
       {
          System.out.println(specificLecturers[i].toString());
          System.out.println();
-      }
+      }*/
       
       for(int i = 0 ; i < lecturers.getAllLecturers().size(); i++)
       {
@@ -277,6 +276,20 @@ public class VIATester
       
       System.out.println();
       System.out.println(attendedEvents.toString());
+      
+      String text = "15.12.2017";
+      String[] numbers = new String[4];
+      numbers = text.split("\\.");
+      
+         System.out.println(numbers[1]);
+      
+      
+      int[] results = new int[numbers.length];
+      for(int i = 0; i < numbers.length; i++)
+      {
+            results[i] = Integer.parseInt(numbers[i]);
+      }
+      System.out.println(results[0]+ " " +results[1]+ " " +results[2]);
    }
 
 }

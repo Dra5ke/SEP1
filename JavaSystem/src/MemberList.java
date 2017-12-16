@@ -15,6 +15,12 @@ public class MemberList
      members.add(member);
    }
 
+   public void removeMember(Member member)
+   {
+      members.remove(member);
+      member.getFile().delete();
+   }
+   
    public int getNumberOfMembers()
    {
       return members.size();
@@ -29,7 +35,7 @@ public class MemberList
       
       for (i = 0; i < members.size(); i++)
       {
-         if (members.get(i).getName() == name) 
+         if (members.get(i).getName().equals(name)) 
          {
             member[counter] = members.get(i);
             counter ++;
@@ -38,7 +44,7 @@ public class MemberList
 
       return member;
    }
-
+   
    public Member[] getMember(int paymentYear)
    {
       Member[] member;
@@ -54,12 +60,10 @@ public class MemberList
             counter ++;
          }
       }
-
       return member;
-
    }
 
-   public Member[] getMember(Date ofRegistration)
+   public Member[] getMember(Date dateOfRegistration)
    {
       Member[] member;
       member = new Member[members.size()];
@@ -68,7 +72,7 @@ public class MemberList
       
       for (i = 0; i < members.size(); i++)
       {
-         if (members.get(i).getDateOfRegistration().equals(ofRegistration)) 
+         if (members.get(i).getDateOfRegistration().equals(dateOfRegistration)) 
          {
             member[counter] = members.get(i);
             counter ++;

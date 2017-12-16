@@ -2,67 +2,149 @@ import java.util.ArrayList;
 
 public class LecturerList
 {
-   
-private ArrayList<Lecturer> lecturers;
 
-public LecturerList()
-{
-lecturers = new ArrayList<Lecturer>();
-}
+   private ArrayList<Lecturer> lecturers;
 
-public void addLecturer(Lecturer lecturer)
-{
-  lecturers.add(lecturer);
-}
-
-public int getNumberOfLecturers()
-{
-   return lecturers.size();
-}
-
-public Lecturer[] getLecturer(String name)
-{
-   
-   Lecturer lecturerlist[] = new Lecturer[lecturers.size()];
-   for (int i=0;i<lecturers.size();i++)
+   public LecturerList()
    {
-      if (name == lecturers.get(i).getName())
+      lecturers = new ArrayList<Lecturer>();
+   }
+
+   public void addLecturer(Lecturer lecturer)
+   {
+      lecturers.add(lecturer);
+   }
+
+   public Lecturer getLecturerById(int id)
+   {
+      Lecturer lecturer = new Lecturer(1);
+
+      for (int i = 0; i < lecturers.size(); i++)
       {
-         lecturerlist[i] = (Lecturer) lecturers.get(i);
+         if (lecturers.get(i).getId() == id)
+         {
+            lecturer = lecturers.get(i);
+         }
       }
+      return lecturer;
    }
-   
-   return lecturerlist;
-}
 
-public Lecturer[] getLecturerBySubject(String subject)
-{
-   
-   Lecturer lecturerlist[] = new Lecturer[lecturers.size()];
-   for (int i=0;i<lecturers.size();i++)
+   public void removeLecturer(Lecturer lecturer)
    {
-      if (subject == lecturers.get(i).getSubject())
+      lecturers.remove(lecturer);
+      lecturer.getFile().delete();
+   }
+
+   public int getNumberOfLecturers()
+   {
+      return lecturers.size();
+   }
+
+   public Lecturer getLecturer(String name)
+   {
+      Lecturer lecturer = new Lecturer(1);
+      for (int i = 0; i < lecturers.size(); i++)
       {
-         lecturerlist[i] = (Lecturer) lecturers.get(i);
+         if (lecturers.get(i).getName().equals(name))
+         {
+            lecturer = (Lecturer) lecturers.get(i);
+         }
       }
+
+      return lecturer;
+   }
+
+   public Lecturer[] getLecturerBySubject(String subject)
+   {
+
+      Lecturer[] lecturerlist = new Lecturer[lecturers.size()];
+      int k = 0;
+      for (int i = 0; i < lecturers.size(); i++)
+      {
+         if (lecturers.get(i).getSubject().equals(subject))
+         {
+            lecturerlist[k] = (Lecturer) lecturers.get(i);
+            k++;
+         }
+      }
+
+      return lecturerlist;
    }
    
-   return lecturerlist;
-}
-
-public ArrayList<Lecturer> getAllLecturers()
-{
-   return lecturers;
-}
-
-public String toString()
-{
-   String list = "";
-   for (int i = 0; i< lecturers.size(); i++)
+   public Lecturer[] getLecturerByPhone(String phone)
    {
-      list = list + lecturers.get(i).toString() + "\n" + "\n";
+
+      Lecturer[] lecturerlist = new Lecturer[lecturers.size()];
+      int k = 0;
+      for (int i = 0; i < lecturers.size(); i++)
+      {
+         if (lecturers.get(i).getPhone().equals(phone))
+         {
+            lecturerlist[k] = lecturers.get(i);
+            k++;
+         }
+      }
+
+      return lecturerlist;
    }
-   return list;
-}
+   
+   public Lecturer[] getLecturer(boolean sponsored)
+   {
+      Lecturer[] lecturerList = new Lecturer[lecturers.size()];
+      
+      int k = 0;
+      for(int i = 0; i < lecturers.size(); i++)
+      {
+         if(sponsored == lecturers.get(i).isSponsor())
+         {
+            lecturerList[k] = lecturers.get(i);
+            k++;
+         }
+      }
+      
+      return lecturerList;
+   }
+   
+   public Lecturer[] getLecturerByEmail(String email)
+   {
+      Lecturer[] lecturerList = new Lecturer[lecturers.size()];
+      int k = 0;
+      for(int i = 0; i < lecturers.size(); i++)
+      {
+         if(lecturers.get(i).getEmail().equals(email))
+         {
+            lecturerList[k] = lecturers.get(i);
+            k++;
+         }
+      }
+      
+      return lecturerList;
+   }
+
+   public ArrayList<Lecturer> getAllLecturers()
+   {
+      return lecturers;
+   }
+
+   public Lecturer[] getAllLecturersArray()
+   {
+      Lecturer[] lecturersArr = new Lecturer[lecturers.size()];
+      for (int i = 0; i < lecturers.size(); i++)
+      {
+         lecturersArr[i] = lecturers.get(i);
+      }
+      
+      return lecturersArr;
+   }
+
+   public String toString()
+   {
+      String list = "";
+      for (int i = 0; i < lecturers.size(); i++)
+      {
+         list = list + lecturers.get(i).toString() + "\n" + "\n";
+      }
+      return list;
+   }
 
 }
