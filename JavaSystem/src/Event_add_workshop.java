@@ -704,7 +704,6 @@ public class Event_add_workshop extends javax.swing.JFrame {
        workshop.setFood(meal);
        workshop.setVegan(vegan);
        
-       workshop.writeToFile();
        VIASystem.events.addEvent(workshop);
        
        this.setVisible(false);

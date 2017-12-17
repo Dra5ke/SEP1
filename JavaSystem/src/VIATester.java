@@ -9,11 +9,11 @@ public class VIATester
       Date date = new Date(15, 2, 2018);
       Time time = new Time(18, 15);
       Time duration = new Time(2, 30);
-      Lecturer lecturer = new Lecturer();
-      Lecturer lecturer2 = new Lecturer();
-      Lecturer lecturer3 = new Lecturer();
-      Lecturer lecturer4 = new Lecturer();
-      Lecturer lecturer5 = new Lecturer();
+      Lecturer lecturer = new Lecturer(1);
+      Lecturer lecturer2 = new Lecturer(1);
+      Lecturer lecturer3 = new Lecturer(1);
+      Lecturer lecturer4 = new Lecturer(1);
+      Lecturer lecturer5 = new Lecturer(1);
       
       lecturer.setEmail("haraasdasdasdhara");
       lecturer.setPhone("0722DejaImiSunaCunoscut");
@@ -47,9 +47,8 @@ public class VIATester
       
       lecture.setTitle("Pula lu Hara");
       lecture.setStartDate(date);
-      lecture.setstartTime(time);
+      lecture.setStartTime(time);
       lecture.setTotalTickets(100);
-      lecture.setAvailableTickets(30);
       lecture.setDiscount(30);
       lecture.setPrice(1000);
       lecture.setFinalized(false);
@@ -65,9 +64,8 @@ public class VIATester
       Lecture lecture2 = new Lecture();
       lecture2.setTitle("Pula lu Hara2222");
       lecture2.setStartDate(date);
-      lecture2.setstartTime(time);
+      lecture2.setStartTime(time);
       lecture2.setTotalTickets(10120);
-      lecture2.setAvailableTickets(3055);
       lecture2.setDiscount(310);
       lecture2.setPrice(1000);
       lecture2.setFinalized(true);
@@ -78,26 +76,24 @@ public class VIATester
       lecture2.setDuration(duration);
       
       Lecture lecture3 = new Lecture();
-      lecture3.setTitle("Pula lu Hara3333");
+      lecture3.setTitle("Hara3333");
       lecture3.setStartDate(date);
-      lecture3.setstartTime(time);
+      lecture3.setStartTime(time);
       lecture3.setTotalTickets(10120);
-      lecture3.setAvailableTickets(3055);
       lecture3.setDiscount(310);
       lecture3.setPrice(1000);
       lecture3.setFinalized(true);
       
       lecture3.setLecturer(lecturer);
       lecture3.setSubject("About Hara");
-      lecture3.setSponsorName("Hara's Mom");
+      lecture3.setSponsorName("Hara Sponsor");
       lecture3.setDuration(duration);
       
       Lecture lecture4 = new Lecture();
       lecture4.setTitle("Pula ghfdlu Hara");
       lecture4.setStartDate(date);
-      lecture4.setstartTime(time);
+      lecture4.setStartTime(time);
       lecture4.setTotalTickets(10120);
-      lecture4.setAvailableTickets(3055);
       lecture4.setDiscount(310);
       lecture4.setPrice(1000);
       lecture4.setFinalized(false);
@@ -157,7 +153,7 @@ public class VIATester
          System.out.println();
       }
       
-      Lecturer lecturer6 = new Lecturer();
+      Lecturer lecturer6 = new Lecturer(1);
       lecturer6.setEmail("hara@haramail.hara");
       lecturer6.setPhone("0722DejaImiSunaCunoscut");
       lecturer6.setName("Hara");
@@ -174,9 +170,8 @@ public class VIATester
       Seminar seminar = new Seminar();
       seminar.setTitle("Pula lu Hara");
       seminar.setStartDate(date);
-      seminar.setstartTime(time);
+      seminar.setStartTime(time);
       seminar.setTotalTickets(100);
-      seminar.setAvailableTickets(30);
       seminar.setDiscount(30);
       seminar.setPrice(1000);
       seminar.setFinalized(false);
@@ -222,9 +217,8 @@ public class VIATester
       eventsArray3.add(2);
       Date dateOfRegistration = new Date(4, 6, 2017);
       
-      Member member = new Member();
+      Member member = new Member(1);
       member.setAddress("haragade");
-      member.setAttendedEvents(eventsArray);
       member.setDateOfRegistration(dateOfRegistration);
       member.setEmail("hara.hara@haramail.hara");
       member.setName("The Hara");
@@ -232,9 +226,8 @@ public class VIATester
       member.setPaymentYear(2019);
       member.setPhone("50212345");
       
-      Member member2 = new Member();
+      Member member2 = new Member(1);
       member2.setAddress("haragade2");
-      member2.setAttendedEvents(eventsArray2);
       member2.setDateOfRegistration(dateOfRegistration);
       member2.setEmail("hara.hara@haramail.hara");
       member2.setName("The Hara2");
@@ -242,9 +235,8 @@ public class VIATester
       member2.setPaymentYear(2019);
       member2.setPhone("50212345");
       
-      Member member3 = new Member();
+      Member member3 = new Member(1);
       member3.setAddress("haragade3");
-      member3.setAttendedEvents(eventsArray3);
       member3.setDateOfRegistration(dateOfRegistration);
       member3.setEmail("hara.hara@haramail.hara");
       member3.setName("The Hara3");
@@ -262,17 +254,14 @@ public class VIATester
       
       EventList attendedEvents = new EventList();
       
-      attendedEvents = member.getAttendedEvents(events);
       
       System.out.println();
       System.out.println(attendedEvents.toString());
       
-      attendedEvents = member2.getAttendedEvents(events);
       
       System.out.println();
       System.out.println(attendedEvents.toString());
       
-      attendedEvents = member3.getAttendedEvents(events);
       
       System.out.println();
       System.out.println(attendedEvents.toString());

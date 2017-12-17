@@ -633,7 +633,6 @@ public class Event_add_lecture extends javax.swing.JFrame
       lecture.setStartDate(date);
       lecture.setLecturer(lecturerSelected);
       
-      lecture.writeToFile();
       VIASystem.events.addEvent(lecture);
       
       this.setVisible(false);

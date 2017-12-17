@@ -898,7 +898,6 @@ public class Event_add_seminar extends javax.swing.JFrame
       seminar.setTitle(title);
       seminar.setTotalTickets(ticketsInt);
       
-      seminar.writeToFile();
       VIASystem.events.addEvent(seminar);
       
       this.setVisible(false);

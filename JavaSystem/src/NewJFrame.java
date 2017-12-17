@@ -1,5 +1,11 @@
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
+import javax.swing.GroupLayout.Alignment;
+import javax.swing.GroupLayout;
+import javax.swing.LayoutStyle.ComponentPlacement;
+import javax.swing.SwingConstants;
+import java.awt.Component;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -36,7 +42,6 @@ public class NewJFrame extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
-        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("My Java is better than your Java");
@@ -45,7 +50,7 @@ public class NewJFrame extends javax.swing.JFrame {
         setSize(new java.awt.Dimension(800, 900));
 
         jButton1.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        jButton1.setText("Member List");
+        jButton1.setText("Members");
         jButton1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton1.setName("44"); // NOI18N
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -64,14 +69,14 @@ public class NewJFrame extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 0, 0));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("VIA DataBase");
+        jLabel1.setText("VIA System");
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setText("Select the list");
+        jLabel2.setText("Select what should be displayed");
 
         jButton2.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        jButton2.setText("Lecturer List");
+        jButton2.setText("Lecturers");
         jButton2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton2.setName("44"); // NOI18N
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -88,7 +93,7 @@ public class NewJFrame extends javax.swing.JFrame {
         });
 
         jButton3.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        jButton3.setText("Event List");
+        jButton3.setText("Events");
         jButton3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton3.setName("44"); // NOI18N
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -108,49 +113,50 @@ public class NewJFrame extends javax.swing.JFrame {
         jButton4.setText("Exit");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                try
+               {
+                  jButton4ActionPerformed(evt);
+               }
+               catch (FileNotFoundException e)
+               {
+                  e.printStackTrace();
+               }
             }
         });
 
-        jLabel3.setText("Performed by Group4");
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap(258, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 285, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 285, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 285, javax.swing.GroupLayout.PREFERRED_SIZE)
+           layout.createParallelGroup(Alignment.LEADING)
+              .addGroup(layout.createSequentialGroup()
+                 .addContainerGap(249, Short.MAX_VALUE)
+                 .addGroup(layout.createParallelGroup(Alignment.CENTER)
+                    .addComponent(jButton3, GroupLayout.PREFERRED_SIZE, 285, GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton1, GroupLayout.PREFERRED_SIZE, 285, GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton2, GroupLayout.PREFERRED_SIZE, 285, GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel3))
-                .addContainerGap(257, Short.MAX_VALUE))
+                    .addComponent(jLabel1, GroupLayout.PREFERRED_SIZE, 238, GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton4, GroupLayout.PREFERRED_SIZE, 108, GroupLayout.PREFERRED_SIZE))
+                 .addContainerGap(248, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(104, 104, 104)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(109, 109, 109)
-                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(40, 40, 40)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(40, 40, 40)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 244, Short.MAX_VALUE)
-                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(37, 37, 37)
-                .addComponent(jLabel3)
-                .addContainerGap())
+           layout.createParallelGroup(Alignment.LEADING)
+              .addGroup(layout.createSequentialGroup()
+                 .addGap(104)
+                 .addComponent(jLabel1, GroupLayout.PREFERRED_SIZE, 37, GroupLayout.PREFERRED_SIZE)
+                 .addGap(18)
+                 .addComponent(jLabel2, GroupLayout.PREFERRED_SIZE, 19, GroupLayout.PREFERRED_SIZE)
+                 .addGap(109)
+                 .addComponent(jButton3, GroupLayout.PREFERRED_SIZE, 60, GroupLayout.PREFERRED_SIZE)
+                 .addGap(40)
+                 .addComponent(jButton1, GroupLayout.PREFERRED_SIZE, 64, GroupLayout.PREFERRED_SIZE)
+                 .addGap(40)
+                 .addComponent(jButton2, GroupLayout.PREFERRED_SIZE, 64, GroupLayout.PREFERRED_SIZE)
+                 .addPreferredGap(ComponentPlacement.RELATED, 193, Short.MAX_VALUE)
+                 .addComponent(jButton4, GroupLayout.PREFERRED_SIZE, 35, GroupLayout.PREFERRED_SIZE)
+                 .addGap(66))
         );
-
-        layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jButton1, jButton2, jButton3});
+        layout.linkSize(SwingConstants.VERTICAL, new Component[] {jButton1, jButton2, jButton3});
+        getContentPane().setLayout(layout);
 
         getAccessibleContext().setAccessibleDescription("");
 
@@ -175,7 +181,11 @@ public class NewJFrame extends javax.swing.JFrame {
        
     }//GEN-LAST:event_jButton3ActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) throws FileNotFoundException {//GEN-FIRST:event_jButton4ActionPerformed
+       UID.writeIds();
+       FileController.writeEvents();
+       FileController.writeLecturers();
+       FileController.writeMembers();
        System.exit(0);
     }//GEN-LAST:event_jButton4ActionPerformed
 
@@ -215,6 +225,15 @@ public class NewJFrame extends javax.swing.JFrame {
         {
            e.printStackTrace();
         }
+        try
+        {
+           UID.readIds();
+        }
+        catch(FileNotFoundException e)
+        {
+           new File("./IDs").mkdir();
+        }
+        
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
@@ -248,6 +267,5 @@ public class NewJFrame extends javax.swing.JFrame {
     private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     // End of variables declaration//GEN-END:variables
 }

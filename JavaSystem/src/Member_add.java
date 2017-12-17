@@ -466,7 +466,6 @@ public class Member_add extends javax.swing.JFrame
       member.setNewsletterSubscription(sub);
       member.setAttendedEvents(attendedEvs);
 
-      member.writeToFile();
       VIASystem.members.addMember(member);
 
       this.setVisible(false);

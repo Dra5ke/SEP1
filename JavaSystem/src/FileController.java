@@ -1,5 +1,9 @@
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.IOException;
+import java.io.PrintWriter;
 
 public class FileController
 {
@@ -48,6 +52,33 @@ public class FileController
 
    }
    
+   public static void writeEvents() throws FileNotFoundException
+   {
+      for(int i = 0; i < VIASystem.events.getAllEvents().size(); i++)
+      {
+         if(VIASystem.events.getAllEvents().get(i) instanceof Lecture)
+         {
+            Lecture lecture = (Lecture) VIASystem.events.getAllEvents().get(i);
+            lecture.writeToFile();
+         }
+         else if(VIASystem.events.getAllEvents().get(i) instanceof Seminar)
+         {
+            Seminar seminar = (Seminar) VIASystem.events.getAllEvents().get(i);
+            seminar.writeToFile();
+         }
+         else if(VIASystem.events.getAllEvents().get(i) instanceof Workshop)
+         {
+            Workshop workshop = (Workshop) VIASystem.events.getAllEvents().get(i);
+            workshop.writeToFile();
+         }
+         else
+         {
+            Trip trip = (Trip) VIASystem.events.getAllEvents().get(i);
+            trip.writeToFile();
+         }
+      }
+   }
+   
    public static void readLecturers() throws IOException
    {
       File file = new File("./lecturers");
@@ -62,6 +93,14 @@ public class FileController
       }
    }
    
+   public static void writeLecturers() throws FileNotFoundException
+   {
+      for(int i = 0; i < VIASystem.lecturers.getAllLecturers().size(); i++)
+      {
+         VIASystem.lecturers.getAllLecturers().get(i).writeToFile();
+      }
+   }
+   
    public static void readMembers() throws IOException, NullPointerException
    {
       File file = new File("./members");
@@ -73,6 +112,14 @@ public class FileController
          member.setFile(files[i]);
          member.readFile();
          VIASystem.members.addMember(member);
+      }
+   }
+   
+   public static void writeMembers() throws FileNotFoundException
+   {
+      for(int i = 0; i < VIASystem.members.getAllMembers().size(); i++)
+      {
+         VIASystem.members.getAllMembers().get(i).writeToFile();
       }
    }
    

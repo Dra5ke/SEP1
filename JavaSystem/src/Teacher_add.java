@@ -211,7 +211,6 @@ public class Teacher_add extends javax.swing.JFrame {
        lecturer.setSponsor(sponsor);
        lecturer.setSubject(subject);
        
-       lecturer.writeToFile();
        VIASystem.lecturers.addLecturer(lecturer);
        
        this.setVisible(false);

@@ -537,7 +537,6 @@ public class Event_add_trip extends javax.swing.JFrame {
        trip.setTotalTickets(ticketsInt);
        trip.setLocations(locations);
        
-       trip.writeToFile();
        VIASystem.events.addEvent(trip);
        
        this.setVisible(false);
