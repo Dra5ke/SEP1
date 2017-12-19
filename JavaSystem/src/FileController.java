@@ -5,6 +5,14 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+/**
+ * Class used to easily access the methods for reading or writing to/from a file
+ *    an event, member or lecturer
+ *    
+ * @see Lecture#writeToFile()
+ * @see Member#writeToFile()
+ * @see Lecturer#writeToFile()
+ */
 public class FileController
 {
 

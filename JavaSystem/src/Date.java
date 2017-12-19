@@ -1,6 +1,11 @@
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 
+/**
+ * A class representing a date
+ * 
+ * @author Stefan Harabagiu
+ */
 public class Date
 {
    private int day;
@@ -67,6 +72,11 @@ public class Date
       }
    }
    
+   /**
+    * Method used to determine if the current date is larger than the one given as parameter
+    * 
+    * @see EventList#getEvent(Date startDate)
+    */
    public boolean isLarger(Date date)
    {
       if(date.getYear() > this.year) return false;

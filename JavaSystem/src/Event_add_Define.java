@@ -8,8 +8,9 @@ import java.io.IOException;
 /*package javaapplication1;*/
 
 /**
- *
- * @author user
+ * GUI frame used to let user specify what type of event he wishes to create
+ * @author Stefan Harabagiu
+ * @author Nikita Roshkov
  */
 public class Event_add_Define extends javax.swing.JFrame {
 
@@ -38,7 +39,7 @@ public class Event_add_Define extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("My Java is better than your Java");
+        setTitle("VIASystem");
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setPreferredSize(new java.awt.Dimension(800, 900));
         setSize(new java.awt.Dimension(800, 900));

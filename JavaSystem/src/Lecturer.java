@@ -6,6 +6,11 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Scanner;
 
+/**
+ * A class represnting a lecturer
+ * 
+ * @author Andrei Cioanca
+ */
 public class Lecturer
 {
    private int id;
@@ -16,6 +21,10 @@ public class Lecturer
    private String subject;
    private File file;
 
+   /**
+    * Constructor created in order to be able to instantiate a Lecturer type object
+    *    without creating a file for it
+    */
    public Lecturer(int id)
    {
 
@@ -113,6 +122,10 @@ public class Lecturer
       bufferedReader.close();
    }
 
+   /**
+    * Method used for writing the information of a lecturer to a file
+    * @throws FileNotFoundException
+    */
    public void writeToFile() throws FileNotFoundException
    {
       PrintWriter out = new PrintWriter(this.file);
@@ -137,6 +150,10 @@ public class Lecturer
       }
    }
 
+   /**
+    * A method used when displaying all the information of a certain member to the user.
+    * 
+    */
    public String userToString()
    {
       String message = new String();

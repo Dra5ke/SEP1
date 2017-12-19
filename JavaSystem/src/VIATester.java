@@ -1,5 +1,11 @@
 import java.util.ArrayList;
 
+/**
+ * Class used to test the functionality of the system before building a GUI for it
+ * 
+ * @author Andrei Cioanca
+ * @author Stefan Harabagiu
+ */
 public class VIATester
 {
    public static void main(String[] args)

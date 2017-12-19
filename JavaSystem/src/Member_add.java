@@ -16,7 +16,9 @@ import javax.swing.table.TableModel;
 /*package javaapplication1;*/
 
 /**
- * @author user
+ * GUI frame used to let the user input information about a new member
+ * @author Stefan Harabagiu
+ * @author Nikita Roshkov
  */
 public class Member_add extends javax.swing.JFrame
 {
@@ -393,6 +395,12 @@ public class Member_add extends javax.swing.JFrame
       setLocationRelativeTo(null);
    }// </editor-fold>//GEN-END:initComponents
 
+   /**
+    * Method used to get the data that the user inputs and use it to add a new member
+    * 
+    * @author Stefan Harabagiu
+    * @see Member
+    */
    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt)
          throws IOException
    {// GEN-FIRST:event_jButton3ActionPerformed

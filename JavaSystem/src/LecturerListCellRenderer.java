@@ -2,6 +2,9 @@ import java.awt.Component;
 import javax.swing.DefaultListCellRenderer;
 import javax.swing.JList;
 
+/**
+ * @see LectureListCellRenderer
+ */
 public class LecturerListCellRenderer extends DefaultListCellRenderer
 {
    public Component getListCellRendererComponent(JList list, Object value,

@@ -15,15 +15,12 @@ import javax.swing.table.TableModel;
 /*package javaapplication1;*/
 
 /**
- *
- * @author user
+ * GUI frame used to let the user input information about a new workshop
+ * @author Stefan Harabagiu
+ * @author Nikita Roshkov
  */
 public class Event_add_workshop extends javax.swing.JFrame {
 
-    /**
-     * Creates new form Event_add
-    * @throws IOException 
-     */
     public Event_add_workshop() throws IOException {
         initComponents();
     }
@@ -516,6 +513,12 @@ public class Event_add_workshop extends javax.swing.JFrame {
         new List_Events().setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
 
+    /**
+     * Method used to get the data that the user inputs and use it to add a new workshop
+     * 
+     * @author Stefan Harabagiu
+     * @see Workshop
+     */
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) throws NumberFormatException, IOException {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
        

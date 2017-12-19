@@ -2,6 +2,13 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 
+/**
+ * A class which represents every common attribute that the four
+ * types of events have { @see Lecture, @see Seminar, @see Workshop or @see Trip}
+ * 
+ * @author Stefan Harabagiu
+ * 
+*/
 public class Event
 {
    protected int id;
@@ -107,17 +114,22 @@ public class Event
       else
          return false;
    }
-
+   
+   /**
+    * A method used when displaying all the information of a certain event to the user.
+    * 
+    * @see Lecture#userToString()
+    */
    public String userToString()
    {
       String message = new String();
-      if(finalized == true)
-      message = "Event title: " + title + "\n" + "Start date: "
-            + startDate.toString() + "\n" + "Start time: "
-            + startTime.toString() + "\n" + "Total number of tickets: "
-            + totalTickets + "\n" + "Price:" + price + "\n"
-            + "Discount offered: " + discount + "%";
-      
+      if (finalized == true)
+         message = "Event title: " + title + "\n" + "Start date: "
+               + startDate.toString() + "\n" + "Start time: "
+               + startTime.toString() + "\n" + "Total number of tickets: "
+               + totalTickets + "\n" + "Price:" + price + "\n"
+               + "Discount offered: " + discount + "%";
+
       return message;
    }
 

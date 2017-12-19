@@ -6,6 +6,11 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Arrays;
 
+/**
+ * Class that defines a more specific Event
+ * 
+ * @author Andrei Cioanca
+ */
 public class Workshop extends Event
 {
    private LecturerList lecturers;
@@ -15,6 +20,9 @@ public class Workshop extends Event
    private String sponsorName;
    private int duration;
 
+   /**
+    * @see Lecture#Lecture()
+    */
    public Workshop(int id)
    {
 
@@ -155,6 +163,10 @@ public class Workshop extends Event
       return list;
    }
 
+   /**
+    * (non-Javadoc)
+    * @see Event#userToString()
+    */
    public String userToString()
    {
       String message = super.userToString();

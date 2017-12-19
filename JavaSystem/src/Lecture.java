@@ -8,6 +8,11 @@ import java.io.ObjectOutputStream;
 import java.io.PrintWriter;
 import java.util.Scanner;
 
+/**
+ * Class that defines a more specific Event
+ * 
+ * @author Andrei Cioanca
+ */
 public class Lecture extends Event
 {
    private Lecturer lecturer;
@@ -15,6 +20,10 @@ public class Lecture extends Event
    private String sponsorName;
    private Time duration;
 
+   /**
+    * Constructor created in order to be able to instantiate a Lecture type object
+    *    without creating a file for it
+    */
    public Lecture(int id)
    {
 
@@ -26,7 +35,12 @@ public class Lecture extends Event
       new File("./events/lectures").mkdir();
       file = new File("./events/lectures/event" + id + ".txt");
    }
-
+   
+   /**
+    * Method for reading a lecture from a file
+    * 
+    * @see FileController#readEvents()
+    */
    public void readFile() throws NumberFormatException, IOException
    {
       FileReader fileReader = new FileReader(file);
@@ -124,6 +138,10 @@ public class Lecture extends Event
       this.duration = duration;
    }
 
+   /**
+    * (non-Javadoc)
+    * @see Event#userToString()
+    */
    public String userToString()
    {
       String message = super.userToString();

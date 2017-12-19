@@ -28,16 +28,13 @@ import java.awt.event.ActionEvent;
 /*package javaapplication1;*/
 
 /**
- * @author user
+ * GUI frame used to display all members
+ * @author Stefan Harabagiu
+ * @author Nikita Roshkov
  */
 public class List_Members extends javax.swing.JFrame
 {
 
-   /**
-    * Creates new form EventsB
-    * 
-    * @throws IOException
-    */
    public List_Members() throws IOException
    {
       initComponents();
@@ -69,7 +66,7 @@ public class List_Members extends javax.swing.JFrame
       jLabel3 = new javax.swing.JLabel();
 
       setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-      setTitle("Events");
+      setTitle("Members");
       setMinimumSize(new java.awt.Dimension(300, 300));
       setModalExclusionType(
             java.awt.Dialog.ModalExclusionType.APPLICATION_EXCLUDE);
@@ -296,6 +293,11 @@ public class List_Members extends javax.swing.JFrame
       setLocationRelativeTo(null);
    }// </editor-fold>//GEN-END:initComponents
 
+   /**
+    * Method used to reset the list after a search has been made
+    * 
+    * @author Stefan Harabagiu
+    */
    private void clearFilterActionPerformed(java.awt.event.ActionEvent evt)
    {
       jTextField1.setText("");
@@ -309,6 +311,13 @@ public class List_Members extends javax.swing.JFrame
       jList1.setListData(eventsArr);
    }
 
+   /**
+    * Method used to search and display a member
+    * 
+    * @author Stefan Harabagiu
+    * @see MemberListCellRenderer
+    * @see MemberList
+    */
    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt)
    {// GEN-FIRST:event_jTextField1ActionPerformed
       // TODO add your handling code here:
@@ -387,6 +396,12 @@ public class List_Members extends javax.swing.JFrame
 
    }// GEN-LAST:event_jButton1ActionPerformed
 
+   /**
+    * Method used for deleting a member
+    * 
+    * @author Stefan Harabagiu
+    * @see MemberList#removeMember(Member)
+    */
    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt)
    {
       VIASystem.members.removeMember(jList1.getSelectedValue());
@@ -402,6 +417,11 @@ public class List_Members extends javax.swing.JFrame
       jList1.setListData(eventsArr);
    }
 
+   /**
+    * Method used to edit a member
+    * 
+    * @see Member
+    */
    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt)
          throws FileNotFoundException
    {// GEN-FIRST:event_jButton2ActionPerformed

@@ -9,14 +9,12 @@ import java.io.IOException;
 /*package javaapplication1;*/
 
 /**
- *
- * @author user
+ * GUI frame used to let the user input information about a new lecturer
+ * @author Stefan Harabagiu
+ * @author Nikita Roshkov
  */
 public class Teacher_add extends javax.swing.JFrame {
 
-    /**
-     * Creates new form Event_add
-     */
     public Teacher_add() {
         initComponents();
     }
@@ -195,6 +193,12 @@ public class Teacher_add extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
+    /**
+     * Method used to get the data that the user inputs and use it to add a new lecturer
+     * 
+     * @author Stefan Harabagiu
+     * @see Lecturer
+     */
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) throws IOException {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
        

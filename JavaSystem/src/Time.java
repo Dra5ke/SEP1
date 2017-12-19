@@ -1,4 +1,7 @@
-
+/**
+ * Class representing time
+ * @author Stefan Harabagiu
+ */
 public class Time
 {
    private int hour;

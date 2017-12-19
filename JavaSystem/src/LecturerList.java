@@ -1,5 +1,10 @@
 import java.util.ArrayList;
 
+/**
+ * A class used to store all the lecturers in an ArrayList
+ * 
+ * @author Andrei Cioanca
+*/
 public class LecturerList
 {
 
@@ -15,6 +20,9 @@ public class LecturerList
       lecturers.add(lecturer);
    }
 
+   /**
+    * @see EventList#getEventById(int id)
+    */
    public Lecturer getLecturerById(int id)
    {
       Lecturer lecturer = new Lecturer(1);
@@ -29,6 +37,11 @@ public class LecturerList
       return lecturer;
    }
 
+   /**
+    * Method used to delete the provided lecturer from the list
+    * 
+    * @param lecturer
+    */
    public void removeLecturer(Lecturer lecturer)
    {
       lecturers.remove(lecturer);
@@ -40,6 +53,10 @@ public class LecturerList
       return lecturers.size();
    }
 
+   /**
+    * Method used for searching lecturers by name
+    * 
+   */ 
    public Lecturer getLecturer(String name)
    {
       Lecturer lecturer = new Lecturer(1);
@@ -54,6 +71,12 @@ public class LecturerList
       return lecturer;
    }
 
+   /**
+    * Method used for searching lecturers by subject
+    * 
+    * @return an array of lecturers that match the parameter. If no lecturers match
+    *          the parameter an empty array will be returned
+    */
    public Lecturer[] getLecturerBySubject(String subject)
    {
 
@@ -71,6 +94,12 @@ public class LecturerList
       return lecturerlist;
    }
    
+   /**
+    * Method used to search lecturers by phone
+    * 
+    * @return an array of lecturers that match the parameter. If no lecturers match
+    *          the parameter an empty array will be returned
+    */
    public Lecturer[] getLecturerByPhone(String phone)
    {
 
@@ -88,6 +117,12 @@ public class LecturerList
       return lecturerlist;
    }
    
+   /**
+    * Method used to search lecturers that are considered sponsors or not
+    * 
+    * @return an array of lecturers that match the parameter. If no lecturers match
+    *          the parameter an empty array will be returned
+    */
    public Lecturer[] getLecturer(boolean sponsored)
    {
       Lecturer[] lecturerList = new Lecturer[lecturers.size()];
@@ -105,6 +140,12 @@ public class LecturerList
       return lecturerList;
    }
    
+   /**
+    * Method used to search lecturers by email
+    * 
+    * @return an array of lecturers that match the parameter. If no lecturers match
+    *          the parameter an empty array will be returned
+    */
    public Lecturer[] getLecturerByEmail(String email)
    {
       Lecturer[] lecturerList = new Lecturer[lecturers.size()];

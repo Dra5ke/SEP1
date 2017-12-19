@@ -1,5 +1,10 @@
 import java.util.ArrayList;
 
+/**
+ * A class used to store all the members in an ArrayList
+ * 
+ * @author Andrei Cioanca
+*/
 public class MemberList
 {
 
@@ -15,6 +20,10 @@ public class MemberList
      members.add(member);
    }
 
+   /**
+    * Method used to remove the member from the list
+    * @param member
+    */
    public void removeMember(Member member)
    {
       members.remove(member);

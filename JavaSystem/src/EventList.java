@@ -3,6 +3,12 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
 
+/**
+ * A class used to store all the events in an ArrayList
+ * 
+ * @author Stefan Harabagiu
+*/
+
 public class EventList
 {
    private ArrayList<Event> events;
@@ -17,6 +23,12 @@ public class EventList
       events.add(event);
    }
    
+   /**
+    * Method used to search for a specific event using the id as a parameter
+    * 
+    * @see UID 
+    * 
+   */
    public Event getEventById(int id)
    {
       Event event = new Event();
@@ -31,6 +43,10 @@ public class EventList
       return event;
    }
 
+   /**
+    * Method used to remove the event from the list
+    * @param event
+    */
    public void removeEvent(Event event)
    {
       events.remove(event);
@@ -86,6 +102,12 @@ public class EventList
       return events;
    }
    
+   /**
+    * Method used for searching events by title
+    * 
+    * @return an array of events that match the parameter. If there are no events that match
+    *          the parameter an empty array will be returned
+   */ 
    public Event[] getEventByTitle(String title)
    {
       Event[] events = new Event[this.getAllEvents().size()];
@@ -103,6 +125,12 @@ public class EventList
       return events;
    }
    
+   /**
+    * Method used to search events by the finalization status
+    * 
+    * @return an array of events that match the parameter. If there are no events that match
+    *          the parameter an empty array will be returned
+    */
    public Event[] getEvent(boolean finalized)
    {
       Event finalizedEvents[];
@@ -120,6 +148,16 @@ public class EventList
       return finalizedEvents;
    }
 
+   /**
+    * Method used to search events by start date
+    * 
+    * @param startDate
+    *          A date type object that will be used for comparing
+    *          @see Date#isLarger(Date date)
+    * 
+    * @return an array of events that have a larger start date than the one provided as parameter.
+    *         If there are no events that match the requirement an empty array will be returned
+    */
    public Event[] getEvent(Date startDate)
    {
       Event eventsArray[];
@@ -137,6 +175,12 @@ public class EventList
       return eventsArray;
    }
 
+   /**
+    * Method used to search events by subject
+    * 
+    * @return an array of events that match the parameter. If there are no events that match
+    *          the parameter an empty array will be returned
+    */
    public Event[] getEvent(String subject)
    {
       Event eventsArray[];
@@ -193,6 +237,12 @@ public class EventList
       return eventsArray;
    }
    
+   /**
+    * Method used to search events by price
+    * 
+    * @return an array of events that match the parameter. If there are no events that match
+    *          the parameter an empty array will be returned
+    */
    public Event[] getEvent(int price)
    {
       Event eventsArray[];
@@ -210,6 +260,17 @@ public class EventList
       return eventsArray;
    }
 
+   /**
+    * Method used to search events by lecturer
+    * 
+    * @param lecturer
+    *          A lecturer type object that will be compared with the lecturer attribute of
+    *          every event
+    *          @see Lecturer#equals(Object object)
+    *          
+    * @return an array of events that match the parameter. If there are no events that match
+    *          the parameter an empty array will be returned
+    */
    public Event[] getEvent(Lecturer lecturer)
    {
       Event eventsArray[];
@@ -266,6 +327,12 @@ public class EventList
       return eventsArray;
    }
 
+   /**
+    * Method used to search events by sponsor name
+    * 
+    * @return an array of events that match the parameter. If there are no events that match
+    *          the parameter an empty array will be returned
+    */
    public Event[] getEventBySponsor(String sponsorName)
    {
       Event eventsArray[];

@@ -25,7 +25,9 @@ import java.awt.event.ActionEvent;
 /*package javaapplication1;*/
 
 /**
- * @author user
+ * GUI frame used to display all events
+ * @author Stefan Harabagiu
+ * @author Nikita Roshkov
  */
 public class List_Events extends javax.swing.JFrame
 {
@@ -264,7 +266,14 @@ public class List_Events extends javax.swing.JFrame
       pack();
       setLocationRelativeTo(null);
    }// </editor-fold>//GEN-END:initComponents
-
+   
+   /**
+    * Method used to search and display an event
+    * 
+    * @author Stefan Harabagiu
+    * @see EventListCellRenderer
+    * @see EventList
+    */
    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt)
    {// GEN-FIRST:event_jTextField1ActionPerformed
     // TODO add your handling code here:
@@ -343,6 +352,11 @@ public class List_Events extends javax.swing.JFrame
 
    }// GEN-LAST:event_jButton4ActionPerformed
 
+   /**
+    * Method used to reset the list after a search has been made
+    * 
+    * @author Stefan Harabagiu
+    */
    private void clearFilterActionPerformed(java.awt.event.ActionEvent evt)
    {
       jTextField1.setText("");
@@ -364,6 +378,12 @@ public class List_Events extends javax.swing.JFrame
 
    }// GEN-LAST:event_jButton1ActionPerformed
 
+   /**
+    * Method used for deleting an event
+    * 
+    * @author Stefan Harabagiu
+    * @see EventList#removeEvent(Event)
+    */
    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt)
    {
       VIASystem.events.removeEvent(jList1.getSelectedValue());
@@ -379,6 +399,11 @@ public class List_Events extends javax.swing.JFrame
       jList1.setListData(eventsArr);
    }
 
+   /**
+    * Method used to edit an event
+    * 
+    * @see Member
+    */
    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt)
          throws FileNotFoundException
    {// GEN-FIRST:event_jButton2ActionPerformed

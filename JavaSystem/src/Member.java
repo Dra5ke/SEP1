@@ -7,6 +7,11 @@ import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+/**
+ * A class that represents a member
+ * 
+ * @author Andrei Cioanca
+ */
 public class Member
 {
    private int id;
@@ -20,6 +25,9 @@ public class Member
    private ArrayList<String> attendedEvents;
    private File file;
 
+   /**
+    * @see Lecturer#Lecturer(int id)
+    */
    public Member(int id)
    {
 
@@ -65,6 +73,10 @@ public class Member
       bufferedReader.close();
    }
 
+   /**
+    * Method used for writing the information of a member to a file
+    * @throws FileNotFoundException
+    */
    public void writeToFile() throws FileNotFoundException
    {
       PrintWriter out = new PrintWriter(this.file);
@@ -179,6 +191,9 @@ public class Member
       return attendedEvents;
    }
 
+   /**
+    * Method used for displaying all of a members information to the user
+    */
    public String userToString()
    {
       String message = new String();

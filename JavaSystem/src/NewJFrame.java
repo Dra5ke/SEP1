@@ -15,8 +15,8 @@ import java.awt.Component;
 /*package javaapplication1;*/
 
 /**
- *
- * @author user
+ * Main frame of the system
+ * @author Nikita Roshkov
  */
 public class NewJFrame extends javax.swing.JFrame {
 
@@ -44,7 +44,7 @@ public class NewJFrame extends javax.swing.JFrame {
         jButton4 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("My Java is better than your Java");
+        setTitle("VIASystem");
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setPreferredSize(new java.awt.Dimension(800, 900));
         setSize(new java.awt.Dimension(800, 900));
@@ -181,6 +181,12 @@ public class NewJFrame extends javax.swing.JFrame {
        
     }//GEN-LAST:event_jButton3ActionPerformed
 
+    /**
+     * Upon exiting the system everything gets written to a file
+     * 
+     * @author Stefan Harabagiu
+     * @see FileController
+     */
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) throws FileNotFoundException {//GEN-FIRST:event_jButton4ActionPerformed
        UID.writeIds();
        FileController.writeEvents();

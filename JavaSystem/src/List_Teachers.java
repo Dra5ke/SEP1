@@ -25,15 +25,13 @@ import java.awt.event.ActionEvent;
 /*package javaapplication1;*/
 
 /**
- *
- * @author user
+ * GUI frame used to display all lecturers 
+ *@author Stefan Harabagiu
+ * @author Nikita Roshkov
  */
 public class List_Teachers extends javax.swing.JFrame {
 
-    /**
-     * Creates new form EventsB
-    * @throws IOException 
-     */
+   
     public List_Teachers() throws IOException {
         initComponents();
     }
@@ -61,7 +59,7 @@ public class List_Teachers extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Events");
+        setTitle("Lecturers");
         setMinimumSize(new java.awt.Dimension(300, 300));
         setModalExclusionType(java.awt.Dialog.ModalExclusionType.APPLICATION_EXCLUDE);
         setPreferredSize(new java.awt.Dimension(800, 900));
@@ -243,6 +241,11 @@ public class List_Teachers extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
+    /**
+     * Method used to reset the list after a search has been made
+     * 
+     * @author Stefan Harabagiu
+     */
     private void buttonActionPerformed(java.awt.event.ActionEvent evt)
     {
        jTextField1.setText("");
@@ -256,6 +259,13 @@ public class List_Teachers extends javax.swing.JFrame {
        jList1.setListData(eventsArr);
     }
     
+    /**
+     * Method used to search and display a lecturer
+     * 
+     * @author Stefan Harabagiu
+     * @see LecturerListCellRenderer
+     * @see LecturerList
+     */
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
         // TODO add your handling code here:
        
@@ -302,6 +312,11 @@ public class List_Teachers extends javax.swing.JFrame {
       
     }//GEN-LAST:event_jButton4ActionPerformed
 
+    /**
+     * Method used for deleting a lecturer
+     * @author Stefan Harabagiu
+     * @see LecturerList#removeLecturer(Lecturer)
+     */
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
        
        VIASystem.lecturers.removeLecturer(jList1.getSelectedValue());
@@ -325,6 +340,11 @@ public class List_Teachers extends javax.swing.JFrame {
       
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    /**
+     * Method used to edit a lecturer
+     * 
+     * @see Lecturer
+     */
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) throws FileNotFoundException {//GEN-FIRST:event_jButton2ActionPerformed
         
        Lecturer lecturer = new Lecturer(1);

@@ -5,6 +5,13 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+/**
+ * Class used to attribute every event, member or lecturer a unique identifier
+ * 
+ * @see Lecture#Lecture()
+ * @see Member#Member()
+ * @see Lecturer#Lecturer()
+ */
 public class UID
 {
    private static int member_id = 0;

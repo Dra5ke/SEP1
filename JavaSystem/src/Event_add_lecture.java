@@ -25,14 +25,13 @@ import javax.swing.JOptionPane;
 /*package javaapplication1;*/
 
 /**
- * @author user
+ * GUI frame used to let the user input information about a new lecture
+ * @author Stefan Harabagiu
+ * @author Nikita Roshkov
  */
 public class Event_add_lecture extends javax.swing.JFrame
 {
 
-   /**
-    * Creates new form Event_add
-    */
    public Event_add_lecture() throws IOException
    {
       initComponents();
@@ -518,6 +517,12 @@ public class Event_add_lecture extends javax.swing.JFrame
       new List_Events().setVisible(true);
    }// GEN-LAST:event_jButton2ActionPerformed
 
+   /**
+    * Method used to get the data that the user inputs and use it to add a new lecture
+    * 
+    * @author Stefan Harabagiu
+    * @see Lecture
+    */
    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) throws NumberFormatException, IOException
    {// GEN-FIRST:event_jButton3ActionPerformed
 

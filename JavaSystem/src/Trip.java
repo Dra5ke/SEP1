@@ -5,12 +5,20 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+/**
+ * Class that defines a more specific Event
+ * 
+ * @author Andrei Cioanca
+ */
 public class Trip extends Event
 {
    private String locations[];
    private String handlerName;
    private int duration;
    
+   /**
+    * @see Lecture#Lecture(int id)
+    */
    public Trip(int id)
    {
       

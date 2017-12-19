@@ -1,4 +1,8 @@
-
+/**
+ * A class representing every member, lecturer and event that are stored within the system
+ * 
+ * @author Stefan Harabagiu
+ */
 public class VIASystem
 {
    public static MemberList members = new MemberList();
